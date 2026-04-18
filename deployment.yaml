@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zero-downtime-app
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: zero-downtime
+  template:
+    metadata:
+      labels:
+        app: zero-downtime
+    spec:
+      containers:
+      - name: app
+        image: YOUR_DOCKERHUB_USERNAME/zero-downtime:latest
+        ports:
+        - containerPort: 5000
