@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/zero-downtime-deployment.git'
+                git 'https://github.com/RajBhimani-2003/zero-downtime-deployment.git'
             }
         }
 
