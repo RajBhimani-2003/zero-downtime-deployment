@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: YOUR_DOCKERHUB_USERNAME/zero-downtime:latest
+        image: rajbhimani18/zero-downtime:latest
         ports:
         - containerPort: 5000
